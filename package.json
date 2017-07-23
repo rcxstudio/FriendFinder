@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Allows users to check a library for compatible matches based on selected questions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ropestar1/FriendFinder.git"
+  },
+  "author": "Roper Macaraeg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ropestar1/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Ropestar1/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
