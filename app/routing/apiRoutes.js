@@ -7,13 +7,8 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-    var newFriend = req.body;
-    friends.push(newFriend);
-
-    console.log(newFriend)
-    console.log('res from post', res);
-    console.log('newFriend', newFriend);
-    console.log(res);
-    console.log(friends);
+    res.send(req);
+    // var newFriend = req.body;
+    // friends.push(newFriend);
   });
 };
