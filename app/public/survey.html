@@ -174,8 +174,47 @@
   		<a href="../../api/friends">API Friend List</a> |
   		<a href="https://github.com/Ropestar1/FriendFinder">GitHub Repo</a>
 	</footer>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="../../server.js"></script>
+	
+	<script type="text/javascript">
+
+	    $("#survey-complete").on("click", function(event) {
+	      event.preventDefault();
+
+	      console.log('clicked');
+
+	      // Here we grab the form elements
+	      var newFriend = {
+	        name: $("#full-name-input").val().trim(),
+	        photo: $("#photo-link-input").val().trim(),
+	        scores: [$("#q1-answer").val(), $("#q2-answer").val(), $("#q3-answer").val(),
+	        	$("#q4-answer").val(), $("#q5-answer").val(), $("#q6-answer").val(),
+	        	$("#q7-answer").val(), $("#q8-answer").val(), $("#q9-answer").val(),
+	        	$("#q10-answer").val()]
+	      };
+
+	      console.log('before adding', newFriend);
+
+	      // This line is the magic. It"s very similar to the standard ajax function we used.
+	      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+	      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+	      // depending on if a tables is available or not.
+
+	      $.post("/api/friends", newFriend,
+	        function(data) {
+            	console.log("Yay! You are added!");
+
+            	friends.push(newFriend);
+				// Clear the form when submitting
+				$("#full-name-input").val("");
+				$("#photo-link-input").val("");
+	        });
+
+	      console.log('after adding', newFriend);
+
+	    });
+	</script>
+	<!-- <script type="text/javascript" src="../../server.js"></script> -->
 </body>
 </html>

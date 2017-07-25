@@ -3,6 +3,7 @@ var friends = [
     name: 'Superman',
     photo: '../../images/superman.jpg',
     scores: [3, 3, 5, 5, 5, 1, 1, 5, 5, 4]
+  },
   {
     name: 'Batman',
     photo: '../../images/batman.jpg',
@@ -19,3 +20,5 @@ var friends = [
     scores: [3, 3, 5, 4, 5, 1, 1, 5, 5, 4]
   }
 ];
+
+module.exports = friends;
