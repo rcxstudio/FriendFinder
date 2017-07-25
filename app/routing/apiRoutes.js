@@ -7,7 +7,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-    // var newFriend = res.body;
+    var newFriend = res.body;
     console.log(newFriend)
     console.log('res from post', res);
     console.log('newFriend', newFriend);
