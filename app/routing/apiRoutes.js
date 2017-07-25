@@ -7,16 +7,13 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-    // friends.push(req.body);
+    var newFriend = req.body;
+    friends.push(newFriend);
+
+    console.log(newFriend)
+    console.log('res from post', res);
+    console.log('newFriend', newFriend);
+    console.log(res);
     console.log(friends);
-    console.log(req.body);
-    console.log(friends);
-
-
-
-    // var newFriend = req.body;
-    // console.log(newFriend)
-    // console.log('res from post', res);
-    // console.log('newFriend', newFriend);
   });
 };

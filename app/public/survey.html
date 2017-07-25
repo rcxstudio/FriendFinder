@@ -216,7 +216,7 @@
 	        };
 
 	    	var currentURL = window.location.origin;
-	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    	$.post(currentURL + "/api/friends", newFriend, function(data){
 	    		$("#matchName").text(data.name);
 	    		$('#matchImg').attr("src", data.photo);
 		    	// Show the modal with the best match
