@@ -184,7 +184,6 @@
 
 	      console.log('clicked');
 
-	      // Here we grab the form elements
 	      var newFriend = {
 	        name: $("#full-name-input").val().trim(),
 	        photo: $("#photo-link-input").val().trim(),
@@ -194,16 +193,12 @@
 	        	$("#q10-answer").val()]
 	      };
 
-	      console.log('before adding', newFriend);
+	      var currentURL = window.location.origin;
 
-	      // This line is the magic. It"s very similar to the standard ajax function we used.
-	      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-	      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-	      // depending on if a tables is available or not.
-
-	      $.post("/api/friends", newFriend,
+	      $.post(currentURL + "/api/friends", newFriend,
 	        function(data) {
             	console.log("Yay! You are added!");
+            	// console.log(friends);
 
             	friends.push(newFriend);
 				// Clear the form when submitting
@@ -211,10 +206,9 @@
 				$("#photo-link-input").val("");
 	        });
 
-	      console.log('after adding', newFriend);
+	      console.log('newFriend', newFriend);
 
 	    });
 	</script>
-	<!-- <script type="text/javascript" src="../../server.js"></script> -->
 </body>
 </html>
