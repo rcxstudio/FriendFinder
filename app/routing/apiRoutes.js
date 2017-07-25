@@ -1,3 +1,4 @@
+var path = require('path');
 var friends = require("../data/friends.js"); //do you need .js extension?
 
 module.exports = function(app) {
@@ -13,6 +14,7 @@ module.exports = function(app) {
 
   app.post("/api/friends", function(req, res) {
     var newFriend = req.body;
+    console.log(newFriend)
     console.log('res from post', res);
     console.log('newFriend', newFriend);
 
