@@ -7,9 +7,9 @@ var friends = require('./app/data/friends.js');
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-app.get('/', function (req, res) {
-  res.send('./routing/')
-})
+// app.get('/', function (req, res) {
+//   res.send('./routing/')
+// })
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
