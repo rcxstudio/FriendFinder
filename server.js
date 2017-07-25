@@ -8,7 +8,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send('./routing/')
 })
 
 app.use(bodyParser.json());
