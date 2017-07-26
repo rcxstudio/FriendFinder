@@ -26,7 +26,7 @@
 	<section class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<form>
+				<form id="main-form">
 					<div class="form-group">
 						<label for="full-name-input">
 							<h3>Name (Required)</h3>
@@ -224,8 +224,7 @@
 		    	$("#resultsModal").modal('toggle');
 	    	});
 
-			$("#full-name-input").val("");
-			$("#photo-link-input").val("");
+			// $('#main-form').reset(); // NOT WORKING FOR SOME REASON
 	    });
 	</script>
 </body>
